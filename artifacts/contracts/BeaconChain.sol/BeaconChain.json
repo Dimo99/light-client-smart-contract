@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "BeaconChain",
+  "sourceName": "contracts/BeaconChain.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220d0548af982ad8742bb93c6624a845329f81d56c472fbd3d57257d13037d87aca64736f6c63430008090033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220d0548af982ad8742bb93c6624a845329f81d56c472fbd3d57257d13037d87aca64736f6c63430008090033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

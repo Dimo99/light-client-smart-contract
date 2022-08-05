@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "MerkleProof",
+  "sourceName": "contracts/MerkleProof.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220fb15612b434996ebf2e95d25af6223580fcd2f906594a766c37cc21d6ac27e1464736f6c63430008090033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220fb15612b434996ebf2e95d25af6223580fcd2f906594a766c37cc21d6ac27e1464736f6c63430008090033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

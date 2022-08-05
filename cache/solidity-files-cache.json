@@ -1,0 +1,254 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/dimo/code/repos/circom-exercises/light-client-smart-contract/contracts/BeaconChain.sol": {
+      "lastModificationDate": 1659692749848,
+      "contentHash": "45f335c1586f9b86dc4b9ccd0f6823c8",
+      "sourceName": "contracts/BeaconChain.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./MerkleProof.sol"
+      ],
+      "versionPragmas": [
+        "0.8.9"
+      ],
+      "artifacts": [
+        "BeaconChain"
+      ]
+    },
+    "/home/dimo/code/repos/circom-exercises/light-client-smart-contract/contracts/MerkleProof.sol": {
+      "lastModificationDate": 1659692765936,
+      "contentHash": "6eb7240f14ac4e0205442ab72c8a95b0",
+      "sourceName": "contracts/MerkleProof.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.9"
+      ],
+      "artifacts": [
+        "MerkleProof"
+      ]
+    },
+    "/home/dimo/code/repos/circom-exercises/light-client-smart-contract/contracts/BeaconLightClient.sol": {
+      "lastModificationDate": 1659708084812,
+      "contentHash": "cff00138e0cd5cad1fe5bcf671c0b91f",
+      "sourceName": "contracts/BeaconLightClient.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Bitfield.sol",
+        "./BeaconChain.sol"
+      ],
+      "versionPragmas": [
+        "0.8.9"
+      ],
+      "artifacts": [
+        "BeaconLightClient",
+        "IBLS"
+      ]
+    },
+    "/home/dimo/code/repos/circom-exercises/light-client-smart-contract/contracts/Bitfield.sol": {
+      "lastModificationDate": 1659692811282,
+      "contentHash": "3c8cba3a4add629bff934cfd1ec08ee5",
+      "sourceName": "contracts/Bitfield.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Bits.sol"
+      ],
+      "versionPragmas": [
+        "0.8.9"
+      ],
+      "artifacts": [
+        "Bitfield"
+      ]
+    },
+    "/home/dimo/code/repos/circom-exercises/light-client-smart-contract/contracts/Bits.sol": {
+      "lastModificationDate": 1659692831673,
+      "contentHash": "c8f75086ee071862b7ffd0f4a12c6481",
+      "sourceName": "contracts/Bits.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.9"
+      ],
+      "artifacts": [
+        "Bits"
+      ]
+    },
+    "/home/dimo/code/repos/circom-exercises/light-client-smart-contract/contracts/mine.sol": {
+      "lastModificationDate": 1659708102573,
+      "contentHash": "dbbe34e1276ab7b98e678db7f4f79129",
+      "sourceName": "contracts/mine.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [],
+      "artifacts": []
+    },
+    "/home/dimo/code/repos/circom-exercises/light-client-smart-contract/contracts/MockBLS.sol": {
+      "lastModificationDate": 1659705905817,
+      "contentHash": "3d3763d1321c57c612cfac9d717038ab",
+      "sourceName": "contracts/MockBLS.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.9"
+      ],
+      "artifacts": [
+        "MockBLS"
+      ]
+    }
+  }
+}
