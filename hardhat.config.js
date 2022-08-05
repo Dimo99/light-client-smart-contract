@@ -1,6 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
 const { task } = require("hardhat/config");
 const fs = require('fs');
+const Contract = require('web3-eth-contract');
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
@@ -558,14 +559,13 @@ task("deploy", "Deploy contracts on a provided network").setAction(
     console.log(beaconLightClientContract.address);
     console.log("Done!");
 
-
     console.log(" ----- EXECUTION ----- ");
 
     let state_root = await beaconLightClientContract.state_root();
 
     console.log("State root: ", state_root);
-    const rawdata = fs.readFileSync('../eth2-light-client-updates/mainnet/updates/00290.json');
-    const lightClientUpdate = JSON.parse(rawdata);
+    let rawdata = fs.readFileSync('../eth2-light-client-updates/mainnet/updates/00290.json');
+    let lightClientUpdate = JSON.parse(rawdata);
 
     const part1 = lightClientUpdate.sync_aggregate.sync_committee_bits.slice(0, 2+64);
     const part2 = lightClientUpdate.sync_aggregate.sync_committee_bits.slice(2+64, 130);
@@ -574,8 +574,34 @@ task("deploy", "Deploy contracts on a provided network").setAction(
 
     console.log('here');
 
-    const result = await beaconLightClientContract.light_client_update(lightClientUpdate, {gasLimit: 40000000});
 
+    Contract.setProvider("http://127.0.0.1:8545/");
+
+    rawdata = fs.readFileSync('./artifacts/contracts/BeaconLightClient.sol/BeaconLightClient.json');
+    let file = JSON.parse(rawdata);
+
+    let contract = new Contract(file.abi, beaconLightClientContract.address);
+
+
+    function convertObjectToNestedArray(obj, result) {
+      if (
+          typeof obj === 'object' &&
+          !Array.isArray(obj) &&
+          obj !== null
+      ) {
+          for (const property in obj) {
+              result.push(convertObjectToNestedArray(obj[property], []));
+          }
+      } else {
+          result.push(obj);
+      }
+      return result;
+    }
+
+    let arr = [];
+    convertObjectToNestedArray(lightClientUpdate, arr);
+
+    const result = contract.methods.light_client_update(arr).encodeABI();
     console.log(result);
   }
 );
@@ -587,7 +613,7 @@ module.exports = {
   networks: {
     hardhat: {
       allowUnlimitedContractSize: true,
-      blockGasLimit: 40000000
+      blockGasLimit: 140000000
     },
   },
 };
